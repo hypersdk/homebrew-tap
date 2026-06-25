@@ -1,15 +1,15 @@
 cask "zysign" do
   version "1.1.0"
-  sha256  "FILL_IN_AFTER_make_dmg"   # shasum -a 256 dist/ZySign-1.1.0.dmg
+  sha256  "234360354ca95020351adf3554efbb489a96edae2419bcff75c921ef10f41509"
 
-  url "https://github.com/hypersdk/zysign/releases/download/v#{version}/ZySign-#{version}.dmg"
+  url "https://github.com/hypersdk/zysign/releases/download/v#{version}/ZySign-#{version}.pkg"
   name "ZySign"
-  desc "macOS DSC signing toolkit for MCA21 V3 — replaces eMudhra emBridge"
+  desc "macOS DSC signing toolkit for MCA21 V3"
   homepage "https://github.com/hypersdk/zysign"
 
   depends_on macos: :ventura
 
-  app "ZySign.app"
+  pkg "ZySign-#{version}.pkg"
 
   zap trash: [
     "~/Library/Application Support/com.zyvor.zysign",
