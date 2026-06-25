@@ -7,7 +7,7 @@ cask "zysign" do
   desc "macOS DSC signing toolkit for MCA21 V3 — replaces eMudhra emBridge"
   homepage "https://github.com/hypersdk/zysign"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "ZySign.app"
 
