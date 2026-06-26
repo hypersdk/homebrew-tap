@@ -4,12 +4,14 @@ cask "zysign" do
 
   url "https://github.com/hypersdk/zysign/releases/download/v#{version}/ZySign-#{version}.pkg"
   name "ZySign"
-  desc "macOS DSC signing toolkit for MCA21 V3"
-  homepage "https://github.com/hypersdk/zysign"
+  desc "macOS DSC signing toolkit for MCA21 V3 — replaces eMudhra emBridge"
+  homepage "https://zyvor.dev/mac-sign"
 
   depends_on macos: :ventura
 
   pkg "ZySign-#{version}.pkg"
+
+  uninstall pkgutil: "com.zyvor.zysign"
 
   zap trash: [
     "~/Library/Application Support/com.zyvor.zysign",
